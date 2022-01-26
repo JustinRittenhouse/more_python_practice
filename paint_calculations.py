@@ -1,3 +1,6 @@
+#I added this after Derek explained how.
+from math import pi
+
 def rectangle():
     l = float(input("\nWhat is the length of your rectangular room in feet? "))
     w = float(input("What is the width of your rectangular room in feet? "))
@@ -66,7 +69,7 @@ def trapezoid():
     
 def circle():
     r = float(input("\nWhat is the length stretching across your circular room in feet? (What is the room's diameter in feet?) ")) / 2
-    area = 3.14 * r ** 2
+    area = pi * r ** 2
     circumference = 6.28 * r
     input(f"\nYour room's area is about {str(area)} square feet, which would require about {str(area / 400)} gallons of paint. [Hit \"Enter\" to continue.]")
     input(f"Your room's circumference is about {str(circumference)} feet, which would require about {circumference} feet of painter's tape. [Hit \"Enter\" to continue.]")
@@ -75,7 +78,7 @@ def ellipse():
     a = float(input("\nWhat is the longest length in feet from one side of the room to the other that you can measure? ")) / 2
     print("What is the length in feet of the perpendicular line that cuts through the middle of the line you just measured from wall to wall? ")
     b = float(input("This should be the shortest measurement from side to side. ")) / 2
-    area = 3.14 * a * b
+    area = pi * a * b
     input(f"\nYour room's area is about {str(area)} square feet, which would require about {str(area / 400)} gallons of paint. [Hit \"Enter\" to continue.]")
     print("Do you have any idea how complicated the circumference of an ellipse is? Didn't you just measure with measuring tape? Measure it yourself!")
     print("And then, uh... you would need that much feet of tape to cover your baseboards... Ok, I'm sorry for snapping there;")
