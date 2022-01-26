@@ -12,11 +12,21 @@ def rectangle():
     #     perimeter = int(perimeter)
     # except:
     #     pass
-    """Here's my actual code of trying to convert floats to decimals. It works some of the time."""
-    if area % 1 == 0.0:
+    """Here was another old version before Lucas found is_integer."""
+    # if area % 0 == 0.0
+    #   area = int(area)
+    #if perimeter % 0 = 0.0
+    #   perimeter = int(perimeter)
+    """This also only works some of the time."""
+    # if area.is_integer():
+    #     area = int(area)
+    # if perimeter.is_integer():
+    #     perimeter == int(perimeter)
+    """This final idea came from Hamilton. When numbers don't work, stop making them numbers!"""
+    if ".0" in str(area):
         area = int(area)
-    if perimeter % 1 == 0.0:
-        perimeter == int(perimeter)
+    if ".0" in str(perimeter):
+        perimeter = int(perimeter)
     input(f"\nYour room's area is {str(area)} square feet, which would require about {str(area / 400)} gallons of paint. [Hit \"Enter\" to continue.]")
     input(f"Your room's perimeter is {str(perimeter)} feet, which would require about {str(perimeter)} feet of painter's tape. [Hit \"Enter\" to continue.]")
 
@@ -28,10 +38,10 @@ def triangle():
     s = (a + b + c) / 2
     area = (s * (s - a) * (s - b) * (s - c)) ** 0.5
     perimeter = a + b + c
-    if area % 1 == 0.0:
+    if ".0" in str(area):
         area = int(area)
-    if perimeter % 1 == 0.0:
-        perimeter == int(perimeter)
+    if ".0" in str(perimeter):
+        perimeter = int(perimeter)
     input(f"\nYour room's area is {str(area)} square feet, which would require about {str(area / 400)} gallons of paint. [Hit \"Enter\" to continue.]")
     input(f"Your room's perimeter is {str(perimeter)} feet, which would require about {str(perimeter)} feet of painter's tape. [Hit \"Enter\" to continue.]")
 
@@ -46,10 +56,10 @@ def trapezoid():
     else:
         estimated_area = (b1 + b2) / 2 * s1
     perimeter = b1 + b2 + s1 + s2
-    if estimated_area % 1 == 0.0:
-        estimated_area = int(estimated_area)
-    if perimeter % 1 == 0.0:
-        perimeter == int(perimeter)
+    if ".0" in str(estimated_area):
+        area = int(estimated_area)
+    if ".0" in str(perimeter):
+        perimeter = int(perimeter)
     print('NOTE: Without knowing the exact layout of your trapezoidal floor, this area calculation is only a rough estimate.')
     input(f"\nYour room's area is {str(estimated_area)} square feet, which would require about {str(estimated_area / 400)} gallons of paint. [Hit \"Enter\" to continue.]")
     input(f"Your room's perimeter is {str(perimeter)} feet, which would require about {str(perimeter)} feet of painter's tape. [Hit \"Enter\" to continue.]")
